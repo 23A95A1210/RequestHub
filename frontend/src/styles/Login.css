@@ -1,0 +1,189 @@
+/* MainPage.css */
+.main-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(20px, 1fr) minmax(auto, 600px) minmax(20px, 1fr);
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.grid-header, .grid-main, .grid-footer {
+  grid-column: 2;
+}
+
+.grid-header {
+  padding: 2rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+
+.grid-header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.grid-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: 1px solid white;
+  color: #e5e5e5;
+  padding: 1.25rem 1.5rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:hover {
+  border-color: #666;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.user-btn:hover {
+  color: #8d8d8d;
+}
+
+.admin-btn:hover {
+  color: #8d8d8d;
+}
+
+.btn-arrow {
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+button:hover .btn-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.login-box {
+  background-color: #222;
+  padding: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #333;
+} 
+
+.login-box h2 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login-input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  color: #e5e5e5;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.login-btn {
+  width: 100%;
+  justify-content: center;
+  background-color: #333;
+  padding: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-btn:hover {
+  background-color: #444;
+}
+
+.login-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: 0.5s;
+}
+
+.login-btn:hover::after {
+  left: 100%;
+}
+
+.grid-footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  color: #8d8d8d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 20px 1fr 20px;
+  }
+  
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .login-box {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-grid {
+    grid-template-columns: 10px 1fr 10px;
+  }
+  
+  .grid-header {
+    padding: 1.5rem 0;
+  }
+  
+  button {
+    padding: 1rem 1.25rem;
+  }
+  
+  .login-box {
+    padding: 1.25rem;
+    margin-top: 2rem;
+  }
+}
