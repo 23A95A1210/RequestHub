@@ -13,6 +13,13 @@ import PendingRequest from "../pages/admin/requests/PendingRequest";
 import CurrentRequest from "../pages/admin/requests/CurrentRequest";
 import StudentHistory from "../pages/admin/history/StudentHistory";
 import VilationHistory from "../pages/admin/history/VilationHistory";
+import InternShip from "../pages/student/forms/InternShip";
+import IdCard from "../pages/student/forms/IdCard";
+import Health from "../pages/student/forms/Health";
+import Clubs from "../pages/student/forms/Clubs";
+import Approved from "../pages/student/status/Approved";
+import Rejected from "../pages/student/status/Rejected";
+import Sent from "../pages/student/status/Sent";
 export const routes=createBrowserRouter([
     {
         path:"/",
@@ -39,6 +46,34 @@ export const routes=createBrowserRouter([
             {
                 path:"dashboard",
                 element:<Dashboard/>
+            },
+            {
+                path:"forms/internship",
+                element:<InternShip/>
+            },
+            {
+                path:"forms/idcard",
+                element:<IdCard/>
+            },
+            {
+                path:"forms/health-issue",
+                element:<Health/>
+            },
+            {
+                path:"forms/clubs",
+                element:<Clubs/>
+            },
+            {
+                path:"status/Approved",
+                element:<Approved/>
+            },
+            {
+                path:"status/rejected",
+                element:<Rejected/>
+            },
+            {
+                path:"status/sent",
+                element:<Sent/>
             }
         ]
     },

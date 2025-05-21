@@ -26,10 +26,10 @@ const StudentSidebar = ({ isSidebarOpen }) => {
           )}
           {showForms && (
             <ul className="dropdown" style={{ fontSize: '1rem' }}>
-              <li><Link to="/forms/health">Health Issue</Link></li>
-              <li><Link to="/forms/internships">Internships</Link></li>
-              <li><Link to="/forms/clubs">Clubs</Link></li>
-              <li><Link to="/forms/idcard">ID Card</Link></li>
+              <li><Link to="/student/forms/health-issue">Health Issue</Link></li>
+              <li><Link to="/student/forms/internship">Internships</Link></li>
+              <li><Link to="/student/forms/clubs">Clubs</Link></li>
+              <li><Link to="/student/forms/idcard">ID Card</Link></li>
             </ul>
           )}
         </li>
@@ -44,9 +44,9 @@ const StudentSidebar = ({ isSidebarOpen }) => {
           )}
           {showStatus && (
             <ul className="dropdown" style={{ fontSize: '1rem' }}>
-              <li><Link to="/status/approved">Approved</Link></li>
-              <li><Link to="/status/rejected">Rejected</Link></li>
-              <li><Link to="/status/sent">Sent</Link></li>
+              <li><Link to="/student/status/approved">Approved</Link></li>
+              <li><Link to="/student/status/rejected">Rejected</Link></li>
+              <li><Link to="/student/status/sent">Sent</Link></li>
             </ul>
           )}
         </li>
