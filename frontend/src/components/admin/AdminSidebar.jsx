@@ -38,10 +38,10 @@ const AdminSidebar = ({ isSidebarOpen }) => {
           )}
           {showRequests && (
             <ul className="dropdown" style={{ fontSize: '1rem' }}>
-              <li><Link to="/admin/requests/current">Current Requests</Link></li>
-              <li><Link to="/admin/requests/pending">Pending</Link></li>
-              <li><Link to="/admin/requests/approved">Approved</Link></li>
-              <li><Link to="/admin/requests/rejected">Rejected</Link></li>
+              <li><Link to="/admin/request/current">Current Requests</Link></li>
+              <li><Link to="/admin/request/pending">Pending</Link></li>
+              <li><Link to="/admin/request/approved">Approved</Link></li>
+              <li><Link to="/admin/request/rejected">Rejected</Link></li>
             </ul>
           )}
         </li>
@@ -56,8 +56,8 @@ const AdminSidebar = ({ isSidebarOpen }) => {
           )}
           {showHistory && (
             <ul className="dropdown" style={{ fontSize: '1rem' }}>
-              <li><Link to="/admin/history/violations">Violation History</Link></li>
-              <li><Link to="/admin/history/students">Student History</Link></li>
+              <li><Link to="/admin/history/violation">Violation History</Link></li>
+              <li><Link to="/admin/history/student">Student History</Link></li>
             </ul>
           )}
         </li>

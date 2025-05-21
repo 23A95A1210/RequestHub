@@ -7,6 +7,12 @@ import StudentLayout from "../layouts/StudentLayout";
 import Dashboard from "../pages/student/Dashboard";
 import AdminLayout from "../layouts/AdminLayout";
 import AdminDashboard from "../pages/admin/AdminDashBoard";
+import ApprovedRequest from "../pages/admin/requests/ApprovedRequest";
+import RejectedRequest from "../pages/admin/requests/RejectedRequest";
+import PendingRequest from "../pages/admin/requests/PendingRequest";
+import CurrentRequest from "../pages/admin/requests/CurrentRequest";
+import StudentHistory from "../pages/admin/history/StudentHistory";
+import VilationHistory from "../pages/admin/history/VilationHistory";
 export const routes=createBrowserRouter([
     {
         path:"/",
@@ -43,6 +49,31 @@ export const routes=createBrowserRouter([
             {
                 path:"dashboard",
                 element:<AdminDashboard/>
+            },
+            {
+                path:"request/approved",
+                element:<ApprovedRequest/>
+            },
+            {
+                path:"request/rejected",
+                element:<RejectedRequest/>
+            },
+            {
+                path:"request/pending",
+                element:<PendingRequest/>,
+
+            },
+            {
+                path:"request/current",
+                element:<CurrentRequest/>
+            },
+            {
+                path:"history/student",
+                element:<StudentHistory/>
+            },
+            {
+                path:"history/violation",
+                element:<VilationHistory/>
             }
         ]
     }
