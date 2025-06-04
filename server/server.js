@@ -24,7 +24,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 connectDB();
 
-const allowedOrigins = ['fancy-arithmetic-32ec72.netlify.app']
+const allowedOrigins = ['harmonious-mandazi-077442.netlify.app']
 
 app.use(express.json());
 app.use(cookieParser());
